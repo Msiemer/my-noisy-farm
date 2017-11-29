@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>my-noisy-farm</title>
+    <style>
+    .farmer {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .farm {
+        position: absolute;
+    }
+
+    .cow {
+        top: 370px;
+        left: 500px;
+    }
+
+    .pig {
+        top: 400px;
+        left: 1000px;
+    }
+
+    .horse {
+        top: 370px;
+        left: 700px;
+    }
+
+    .rooster {
+        top: 400px;
+        left: 100px;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img class="farmer" src="background-img.jpg">
+        <img class="farm cow" src="cow.png" onclick="playcow()">
+        <img class="farm pig" src="pig.png" onclick="playpig()">
+        <img class="farm horse" src="horse.png" onclick="playhorse()">
+        <img class="farm rooster" src="rooster.png" onclick="playrooster()">
+
+        <audio src="cow.mp3" data-key="cow" />
+        <audio src="pig.mp3" data-key="pig" />
+        <audio src="horse.mp3" data-key="horse" />
+        <audio src="rooster.mp3" data-key="rooster" />
+    </div>
+    <script type="text/javascript">
+    function playcow() {
+        var audio = document.querySelector("audio[data-key='cow']")
+        audio.currentTime = 0;
+        audio.play();
+    }
+
+    function playpig() {
+        var audio = document.querySelector("audio[data-key='pig']")
+        audio.currentTime = 0;
+        audio.play();
+    }
+
+    function playhorse() {
+        var audio = document.querySelector("audio[data-key='horse']")
+        audio.currentTime = 0;
+        audio.play();
+    }
+
+    function playrooster() {
+        var audio = document.querySelector("audio[data-key='rooster']")
+        audio.currentTime = 0;
+        audio.play();
+    }
+    </script>
+</body>
+
+</html>
